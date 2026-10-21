@@ -1,1 +1,1 @@
-# dmtxt-storage
+# dmtxt-storage | Esta data pertenece a una investigación sobre hydra.ojack.xyz y sus posibilidades para crear e intervenir dispositivos. período 2020 : 2026 | LIVE CODEADO POR UN SER HUMANO EN LA PATAGONIA ARGENTINA 
