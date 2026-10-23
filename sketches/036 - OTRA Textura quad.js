@@ -1,0 +1,17 @@
+solid()
+	.layer(osc(10))
+	.modulate(shape(6, .1, 1), 2)
+	.diff(osc(100, .1, 1)
+		.modulate(shape(4, .5).color(1,.1,.01)
+			.rotate(Math.PI)
+			.scale(1.3, .5)
+			.scrollX(1)
+			.scrollY(-1)
+            .colorama(-.01)
+			.diff(osc(20, .1, .1).saturate(1.5))))
+.contrast(1.25)
+.mask(shape(4,.1,.5).scale(2,5).rotate())
+	.out(o0)
+
+
+screencap()

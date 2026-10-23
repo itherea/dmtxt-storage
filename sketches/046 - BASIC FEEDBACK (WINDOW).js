@@ -1,0 +1,10 @@
+s0.initScreen()
+src(s0)
+
+	.mult(shape(100).scale(2.5,.85,1.35))
+		.modulate(noise([.2,.25,0.30,.25,.2].fast(.2)),()=>Math.cos(-1)*.5)
+		.diff(o0,()=>a.fft[1]*5)
+		.modulateHue(o0,2)
+// .invert()
+	.saturate(2)
+  .out()

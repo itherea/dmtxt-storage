@@ -1,0 +1,23 @@
+pb.setName('deme')
+
+solid(1, .45, .5)
+	.layer(osc("st.x*.09/st.y*5.5", .01, .2)
+		.luma()
+		.blend(o0)
+		.blend(o0)
+		.blend(o0)
+		.blend(o0)
+		.modulateHue(o0, 20))
+	.contrast(1.05)
+	.brightness(.001)
+	.color(0, .99, .099)
+	.blend(noise(1000), .019)
+	.modulateRotate(o0, 1, .01)
+	.scrollY(-.1,-.1)
+	.blend(o0).blend(o0).blend(o0).blend(o0).blend(o0)
+	.modulateHue(o0,1).colorama(.0055)
+	.out(o0)
+
+setResolution(1600,900)
+
+// screencap()

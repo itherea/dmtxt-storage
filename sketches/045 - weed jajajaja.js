@@ -1,0 +1,16 @@
+solid(0,1,0)
+.layer(shape(4,.2,1).thresh().scale(1,.02).luma().color(0,0,0).scrollY(-.1))
+.layer(shape(100,.2,1).thresh().scale(1,.15).luma().color(0,0,0))
+.layer(shape(100,.2,1).thresh().scale(1,.15).luma().color(0,0,0).rotate(.55).scrollX(-.1).scrollY(-.05))
+.layer(shape(100,.2,1).thresh().scale(1,.15).luma().color(0,0,0).rotate(-.55).scrollX(.1).scrollY(-.05))
+.layer(shape(100,.2,1).thresh().scale(1,.15).luma().color(0,0,0).rotate(-.85).scrollX(.17).scrollY(-.12))
+.layer(shape(100,.2,1).thresh().scale(1,.15).luma().color(0,0,0).rotate(.85).scrollX(-.17).scrollY(-.12))
+.layer(shape(100,.2,1).thresh().scale(1,.15).luma().color(0,0,0).rotate(-1).scrollX(.17).scrollY(-.25))
+.layer(shape(100,.2,1).thresh().scale(1,.15).luma().color(0,0,0).rotate(1).scrollX(-.17).scrollY(-.25))
+.out(o0)
+
+src(o0)
+.scale(1,.35).repeat()
+  .out(o1)
+
+render(o1)

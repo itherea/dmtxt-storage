@@ -1,0 +1,21 @@
+solid(1, .5, .001)
+	.layer(osc("st.x*1.9/st.y*.05", 1, "st.x*.0005/st.y*.0005")
+		.luma()
+		.color(1.75, 1.01, .1))
+	.rotate(1, 1)
+	.scrollX(.1, 1)
+	.layer(noise("st.y/1.5/st.y*1.5")
+		.colorama(.1)
+		.luma()
+		.colorama(1))
+	.blend(o0)
+	.blend(o0)
+	.blend(o0)
+	.blend(o0)
+	.modulateHue(o0, 10)
+	.out(o0)
+
+setResolution(1600,900)
+
+
+//screencap()

@@ -1,0 +1,26 @@
+osc(5,.15,1)
+.blend(osc(5,.015,.001),.135)
+.layer(osc(10,.05,1).luma().modulate(o0,.1))
+.modulatePixelate(o0,10,1)
+.rotate(-.5,.1)
+.blend(o0).blend(o0).blend(o0).blend(o0)
+.modulateHue(o0,2.5)
+.colorama([-.005,.05].smooth().fast(2.5))
+.blend(noise(10000,1),.001)
+.blend(shape(30,.5,.5).scale(1,.5)
+       .scrollX(()=>mouse.x*-.00015)
+       .scrollY(()=>mouse.y*-.00015)
+       .colorama(-5)
+       .modulate(osc(25,.01,1))
+       .blend(o0).blend(o0).blend(o0).blend(o0)
+       .modulateHue(o0,100)
+       ,.71)
+.modulate(o0,.005)
+.brightness(.005)
+.contrast(1.065)
+.out(o0)
+
+
+setResolution(1920,1080)
+
+speed=.25
