@@ -30,6 +30,8 @@ Copiá el contenido de cualquier archivo de [`sketches/`](sketches) y pegalo en 
 
 Todo el código está liberado bajo [Creative Commons BY-NC-SA 4.0](LICENSE): podés usarlo, copiarlo y modificarlo citando la fuente, sin fines comerciales y compartiendo tus cambios con la misma licencia.
 
+© 2020–2026 dmtxt ([github.com/itherea](https://github.com/itherea)). Las imágenes que algunos sketches cargan desde internet (Pexels y otros) pertenecen a sus autores y no forman parte de esta licencia.
+
 ## Sketches
 
 <!-- LISTA -->
