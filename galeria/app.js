@@ -318,6 +318,21 @@
     $("#visor").style.setProperty("--alto-barra", $(".barra").offsetHeight + "px");
   }).observe($(".barra"));
 
+  // ---------- Tema: auto (sigue al sistema) → claro → oscuro ----------
+  const TEMAS = { auto: "auto", light: "claro", dark: "oscuro" };
+  function aplicarTema(t) {
+    if (t === "auto") delete document.documentElement.dataset.theme;
+    else document.documentElement.dataset.theme = t;
+    $("#tema").textContent = "· Tema: " + TEMAS[t];
+    $("#tema").setAttribute("aria-label", "Tema: " + TEMAS[t] + ". Cambiar tema");
+    try { t === "auto" ? localStorage.removeItem("tema") : localStorage.setItem("tema", t); } catch (e) {}
+  }
+  $("#tema").onclick = () => {
+    const actualTema = document.documentElement.dataset.theme || "auto";
+    aplicarTema({ auto: "light", light: "dark", dark: "auto" }[actualTema]);
+  };
+  aplicarTema(document.documentElement.dataset.theme || "auto");
+
   // ---------- Inicio ----------
   $("#total").textContent = SK.length;
   $("#verCodigo").setAttribute("aria-pressed", "true");

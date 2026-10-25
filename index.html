@@ -3,6 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<script>
+  // Aplica el tema elegido antes de dibujar (evita un parpadeo)
+  try { const t = localStorage.getItem("tema"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
 <title>dmtxt-storage</title>
 <meta name="description" content="Archivo de sketches de Hydra (hydra.ojack.xyz) 2020–2026. Live codeado por un ser humano en la Patagonia argentina.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +18,7 @@
 <body>
 
 <header class="cabecera">
-  <p class="antetitulo"><span>Archivo de código vivo</span><span>Patagonia argentina</span><span>MMXX – MMXXVI</span></p>
+  <p class="antetitulo"><span>Archivo de código vivo</span><span>Patagonia argentina</span><span>MMXX – MMXXVI <button id="tema" class="tema" title="Cambiar entre automático, claro y oscuro">· Tema: auto</button></span></p>
   <h1>dmtxt-storage</h1>
   <p class="subtitulo">Catálogo de sketches para Hydra</p>
   <hr class="doble">
