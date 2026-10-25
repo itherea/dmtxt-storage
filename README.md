@@ -12,7 +12,7 @@ Cada sketch corre en el navegador con [hydra-synth](https://github.com/hydra-syn
 
 - `Ctrl+Enter` ejecuta la línea, `Alt+Enter` el bloque, `Ctrl+Shift+Enter` todo.
 - `Ctrl+Shift+H` oculta el código. `←` `→` pasan de sketch. `Esc` vuelve a la galería.
-- Los sketches con **Audio** usan el micrófono (botón 🎤) y los de **MIDI** un controlador (`cc[]`).
+- Los sketches con **Audio** usan el micrófono (botón «Micrófono») y los de **MIDI** un controlador (`cc[]`).
 
 Para verla en tu computadora sin internet para las imágenes: abrí `index.html` en el navegador.
 

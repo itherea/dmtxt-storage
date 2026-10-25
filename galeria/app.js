@@ -11,7 +11,7 @@
   };
   const AVISOS = {
     pantalla: "Este sketch usa tu pantalla como fuente: el navegador te va a pedir permiso para compartirla.",
-    audio: "Este sketch reacciona al sonido: activá 🎤 Audio para usar el micrófono.",
+    audio: "Este sketch reacciona al sonido: tocá «Micrófono» para usarlo.",
     midi: "Este sketch se controla con MIDI (cc[]): conectá un controlador y tocá MIDI. Sin controlador usa valores fijos.",
     mouse: "Mové el mouse sobre la imagen: este sketch reacciona a su posición.",
   };
@@ -63,8 +63,8 @@
         : `<span class="sin">${s.n}</span>`;
       b.innerHTML = `
         <div class="mini">${mini}</div>
-        <div class="pie-tarjeta"><span class="num">${s.n}</span><span class="nombre"></span></div>
-        <div class="tags">${s.tags.map((t) => `<span class="tag">${ETIQUETAS[t]}</span>`).join("")}</div>`;
+        <div class="pie-tarjeta"><span class="num">Lám. ${s.n}</span><span class="nombre"></span></div>
+        <div class="tags">${s.tags.map((t) => ETIQUETAS[t]).join(" · ")}</div>`;
       b.querySelector(".nombre").textContent = s.titulo;
       b.onclick = () => abrir(SK.indexOf(s));
       g.append(b);
@@ -144,7 +144,7 @@
     v = Math.max(0, Math.min(v, vers.length - 1));
     $("#visor").hidden = false;
     document.body.style.overflow = "hidden";
-    $("#titulo").textContent = `${s.n} · ${s.titulo}`;
+    $("#titulo").textContent = `Lám. ${s.n} — ${s.titulo}`;
     const cont = $("#versiones");
     cont.innerHTML = "";
     if (vers.length > 1) {
@@ -312,6 +312,11 @@
   };
   $("#buscar").addEventListener("input", (e) => { texto = e.target.value; dibujarGrilla(); });
   window.addEventListener("error", (e) => { if (!$("#visor").hidden) mostrarError(e.message); });
+
+  // El panel de código empieza justo debajo de la barra (que puede ocupar 1 o 2 renglones).
+  new ResizeObserver(() => {
+    $("#visor").style.setProperty("--alto-barra", $(".barra").offsetHeight + "px");
+  }).observe($(".barra"));
 
   // ---------- Inicio ----------
   $("#total").textContent = SK.length;

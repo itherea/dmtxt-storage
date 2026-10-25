@@ -5,16 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>dmtxt-storage</title>
 <meta name="description" content="Archivo de sketches de Hydra (hydra.ojack.xyz) 2020–2026. Live codeado por un ser humano en la Patagonia argentina.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=IM+Fell+English:ital@0;1&family=Courier+Prime&display=swap">
 <link rel="stylesheet" href="galeria/estilo.css">
 </head>
 <body>
 
 <header class="cabecera">
+  <p class="antetitulo"><span>Archivo de código vivo</span><span>Patagonia argentina</span><span>MMXX – MMXXVI</span></p>
   <h1>dmtxt-storage</h1>
-  <p class="bajada">Investigación sobre <a href="https://hydra.ojack.xyz" target="_blank" rel="noopener">hydra.ojack.xyz</a> y sus posibilidades para crear imagen en movimiento mediante código en tiempo real e intervenir dispositivos.</p>
-  <p class="meta"><span id="total"></span> sketches · 2020–2026 · Live codeado por un ser humano en la Patagonia argentina</p>
+  <p class="subtitulo">Catálogo de sketches para Hydra</p>
+  <hr class="doble">
+  <p class="bajada">Esta data pertenece a una investigación sobre <a href="https://hydra.ojack.xyz" target="_blank" rel="noopener">hydra.ojack.xyz</a> y sus posibilidades para crear imagen en movimiento mediante código en tiempo real e intervenir dispositivos.</p>
+  <p class="meta"><span id="total"></span> láminas · live codeado por un ser humano en la Patagonia argentina</p>
   <div class="filtros">
-    <input id="buscar" type="search" placeholder="Buscar…" aria-label="Buscar sketch">
+    <input id="buscar" type="search" placeholder="Buscar por título o número" aria-label="Buscar sketch">
     <div id="chips" class="chips" role="group" aria-label="Filtrar"></div>
   </div>
 </header>
@@ -22,26 +28,27 @@
 <main id="grilla" class="grilla" aria-live="polite"></main>
 
 <footer class="pie">
-  <p>Hacé clic en un sketch para verlo en vivo y editar su código. Código libre bajo <a href="LICENSE">CC BY-NC-SA 4.0</a> · <a href="https://github.com/itherea/dmtxt-storage">repositorio</a></p>
+  <p>Elegí una lámina para verla en vivo, en color, y editar su código.</p>
+  <p>Código libre bajo <a href="LICENSE">CC BY-NC-SA 4.0</a> · <a href="https://github.com/itherea/dmtxt-storage">Repositorio</a></p>
 </footer>
 
 <div id="visor" class="visor" hidden>
   <canvas id="lienzo"></canvas>
   <div class="barra">
-    <button id="cerrar" title="Volver a la galería (Esc)">✕</button>
+    <button id="cerrar" title="Volver a la galería (Esc)">← Catálogo</button>
     <button id="ant" title="Anterior (←)">‹</button>
     <span id="titulo" class="titulo"></span>
     <button id="sig" title="Siguiente (→)">›</button>
     <span id="versiones" class="versiones" role="group" aria-label="Versiones"></span>
     <span class="espacio"></span>
-    <button id="ejecutar" title="Ejecutar todo (Ctrl+Shift+Enter)">▶ Ejecutar</button>
+    <button id="ejecutar" title="Ejecutar todo (Ctrl+Shift+Enter)">Ejecutar</button>
     <button id="verCodigo" title="Mostrar u ocultar código (Ctrl+Shift+H)">Código</button>
-    <button id="mic" title="Usar el micrófono para a.fft">🎤 Audio</button>
+    <button id="mic" title="Usar el micrófono para a.fft">Micrófono</button>
     <button id="midi" title="Conectar un controlador MIDI para cc[]">MIDI</button>
-    <a id="abrirHydra" target="_blank" rel="noopener" title="Abrir este código en hydra.ojack.xyz">Abrir en Hydra ↗</a>
+    <a id="abrirHydra" target="_blank" rel="noopener" title="Abrir este código en hydra.ojack.xyz">Hydra ↗</a>
     <button id="copiar" title="Copiar el código">Copiar</button>
     <a id="bajar" download title="Descargar el archivo .js">Descargar</a>
-    <button id="completa" title="Pantalla completa">⛶</button>
+    <button id="completa" title="Pantalla completa">Ampliar</button>
   </div>
   <div id="aviso" class="aviso" hidden></div>
   <textarea id="codigo" class="codigo" spellcheck="false" autocomplete="off" autocapitalize="off" aria-label="Código del sketch"></textarea>
